@@ -1,0 +1,178 @@
+$red: #FF5151;
+$purple: #9818D6;
+$orange: #FFA41C;
+$grey: #EDEDED;
+$montserrat: 'Montserrat', sans-serif;
+
+* {
+    font-family: $montserrat;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+nav {
+    
+    padding: 40px;
+    padding-left: 7vw;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline;
+            margin: 0 20px;
+
+            a {
+                text-decoration: none;
+                color: $red;
+            }
+
+        }
+    }
+}
+
+.grid-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    .line {
+        width: 1px;
+        height: 100%;
+        background-color: $grey;
+        z-index: 1;
+    }
+
+    .line-in {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: $grey;
+    }
+
+    .line1 {
+        grid-column-start: 2;
+    }
+
+    .line2 {
+        grid-column-start: 3;
+    }
+
+    .line3 {
+        grid-column-start: 4;
+    }
+
+    .line4 {
+        grid-column-start: 5;
+    }
+
+    .line5 {
+        grid-column-start: 6;
+    }
+
+    .line6 {
+        grid-column-start: 7;
+    }
+
+    
+    .lander-header {
+        grid-column-start: 2;
+        width: 30vw;
+        height: 30vw;
+        max-width: 800px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-5%);
+        z-index: 2;
+
+        h1 {
+            margin: 2rem 0;
+            line-height: 3rem;
+        }
+
+        .flex {
+            height: unset;
+            display: flex;
+            align-items: flex-start;
+
+            p {
+                width: 30vw;
+                height: 100%;
+                line-height: 1.6rem;
+                margin: 0;
+            }
+
+            .decoration {
+                width: 15px;
+                height: 40px;
+                background-color: $purple;
+                display: inline-block;
+                margin: 5px 20px 0 0;
+            }
+        }
+    }
+
+    .lander-img {
+        grid-column-start: 5;
+        width: 33vw;
+        height: 33vw;
+        border: 1px solid black;
+        background-color: #fff;
+        box-shadow: 2.5vw 2.5vw 0 black;
+        z-index: 2;
+
+        img {
+            grid-column-start: 5;
+            width: 33vw;
+            height: 33vw;
+            object-fit: cover;
+        }
+    }
+
+    .project-container-1 {
+        grid-column-start: 2;
+
+        padding: 400px 0;
+    }
+
+    .project-container-2 {
+        grid-column-start: 2;
+
+        padding: 400px 0;
+    }
+
+    .main-skills-container {
+        grid-column-start: 2;
+        grid-column-end: 8;
+
+        display: flex;
+        padding: 400px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .testimonials {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        height: 800px;
+        text-align: center;
+
+        padding: 200px 0;
+    }
+}
+
+
+Footer {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    background-color: #1f1f1f;   
+    height: 600px;
+    color: white;
+    text-align: center;
+}
