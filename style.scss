@@ -2,10 +2,11 @@ $red: #FF5151;
 $purple: #9818D6;
 $orange: #FFA41C;
 $grey: #EDEDED;
-$montserrat: 'Montserrat', sans-serif;
+$font1: 'Montserrat', sans-serif;
+$font2: 'Merriweather', ;
 
 * {
-    font-family: $montserrat;
+    font-family: $font1;
 }
 
 body, html {
@@ -14,18 +15,29 @@ body, html {
 }
 
 nav {
-    
-    padding: 40px;
-    padding-left: 7vw;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+
+    height: 120px;
+    width: 100%;
 
     ul {
         list-style: none;
+        margin-left: 12.5vw;
+        padding: 0;
 
         li {
             display: inline;
-            margin: 0 20px;
+            margin-right: 40px;
 
             a {
+                font-weight: 500;
                 text-decoration: none;
                 color: $red;
             }
@@ -41,70 +53,39 @@ nav {
     height: 100%;
     width: 100%;
     z-index: 0;
-
-    .line {
-        width: 1px;
-        height: 100%;
-        background-color: $grey;
-        z-index: 1;
-    }
-
-    .line-in {
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        background-color: $grey;
-    }
-
-    .line1 {
-        grid-column-start: 2;
-    }
-
-    .line2 {
-        grid-column-start: 3;
-    }
-
-    .line3 {
-        grid-column-start: 4;
-    }
-
-    .line4 {
-        grid-column-start: 5;
-    }
-
-    .line5 {
-        grid-column-start: 6;
-    }
-
-    .line6 {
-        grid-column-start: 7;
-    }
-
+    
     
     .lander-header {
         grid-column-start: 2;
-        width: 30vw;
-        height: 30vw;
+
+        width: 33vw;
+        height: 33vw;
         max-width: 800px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-5%);
+        margin-top: 120px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
         z-index: 2;
 
         h1 {
-            margin: 2rem 0;
-            line-height: 3rem;
+            font-size: 5rem;
+            margin: 3rem 0;
+            line-height: 5.5rem;
         }
 
         .flex {
-            height: unset;
             display: flex;
             align-items: flex-start;
 
             p {
+                font-family: $font2;
+                font-size: 1.2rem;
+                opacity: 0.6;
                 width: 30vw;
                 height: 100%;
-                line-height: 1.6rem;
+                line-height: 2rem;
                 margin: 0;
             }
 
@@ -113,48 +94,270 @@ nav {
                 height: 40px;
                 background-color: $purple;
                 display: inline-block;
-                margin: 5px 20px 0 0;
+                margin: 8px 20px 0 0;
             }
         }
     }
 
     .lander-img {
         grid-column-start: 5;
-        width: 33vw;
-        height: 33vw;
+
+        margin-top: 120px;
+
+        width: 35vw;
+        height: 35vw;
+
         border: 1px solid black;
         background-color: #fff;
+
         box-shadow: 2.5vw 2.5vw 0 black;
         z-index: 2;
 
         img {
             grid-column-start: 5;
-            width: 33vw;
-            height: 33vw;
+            width: 35vw;
+            height: 35vw;
             object-fit: cover;
         }
     }
 
     .project-container-1 {
         grid-column-start: 2;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
 
-        padding: 400px 0;
+        padding: 400px 0 0 0;
+        z-index: 2;
+
+        .left-container {
+            grid-column-start: 1;
+            width: 33vw;
+
+            p {
+                font-family: $font2;
+                opacity: 0.6;
+            }
+
+            h1 {
+                margin: 2rem 0;
+                font-size: 3rem;
+                line-height: 3.5rem;
+            }
+
+            img {
+                object-fit: cover;
+                width: 33vw;
+                height: 25vw;
+            }
+
+            a {
+                font-family: $font2;
+                font-size: 1.2rem;
+
+                text-decoration: none;
+                color: $red;
+                display: flex;
+                align-items: flex-end;
+                height: 100px;
+            }
+        }
+
+        .right-container {
+            grid-column-start: 4;
+            width: 33vw;
+            height: 100%;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                width: 33vw;
+                height: 25vw;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                
+                width: 33vw;
+                height: 25vw;
+                background-color: rgba(0,0,0,0.03);
+            }
+
+            .overlay:before {
+                content: '';
+                width: 15px;
+                height: 40px;
+                background-color: $red;
+                display: block;
+                position: relative;
+                top: -104px;
+            }
+        }
     }
+
+
 
     .project-container-2 {
         grid-column-start: 2;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
 
-        padding: 400px 0;
+        padding: 250px 0 0 0;
+        z-index: 2;
+
+        .left-container {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            justify-self: end;
+
+            width: 33vw;
+
+            p {
+                font-family: $font2;
+                opacity: 0.6;
+            }
+
+            h1 {
+                margin: 2rem 0;
+                font-size: 3rem;
+                line-height: 3.5rem;
+            }
+
+            img {
+                object-fit: cover;
+                width: 33vw;
+                height: 25vw;
+                border: 1px solid black;
+            }
+
+            a {
+                font-family: $font2;
+                font-size: 1.2rem;
+
+                text-decoration: none;
+                color: $red;
+                display: flex;
+                align-items: flex-end;
+                height: 100px;
+            }
+        }
+
+        .right-container {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            justify-self: end;
+
+            width: 33vw;
+            height: 100%;
+            position: relative;
+
+            .img {
+                box-sizing: border-box;
+                width: 33vw;
+                height: 25vw;
+                background-color: $grey;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                img {
+                    object-fit: contain;
+                    padding: 4vw 0 0 0;
+                    width: 33vw;
+                    height: 25vw;
+                }
+            }
+
+            .img::before {
+                content: '';
+                width: 15px;
+                height: 40px;
+                background-color: $purple;
+                position: absolute;
+                right: 0;
+                top: -104px;
+            }
+        }
     }
 
-    .main-skills-container {
-        grid-column-start: 2;
-        grid-column-end: 8;
+    .project-container-2::before {
+        content: '';
+        width: 15px;
+        height: 40px;
+        background-color: $grey;
+        margin-bottom: 30px;
+    }
 
-        display: flex;
-        padding: 400px 0;
-        width: 100%;
-        justify-content: space-between;
+
+    .main-skills-container {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        background-color: #fff;
+
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        padding: 100px 0;
+        margin: 200px 0;
+        z-index: 2;
+
+        .code, .uxui, .proto {
+            display: flex;
+            width: 50vw;
+            min-width: 600px;
+            max-width: 1600px;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px;
+
+            img {
+                width: 15vw;
+                height: 15vw;
+                object-fit: contain;
+                margin-right: 100px;
+            }
+
+            h3 {
+                display: inline-block;
+                font-size: 1.6rem;
+            }
+
+            p {
+                width: 30vw;
+                font-family: $font2;
+                line-height: 2rem;
+            }
+        }
+
+        .code {
+
+            h3 {
+                color: $purple;
+            }
+
+        }
+
+        .uxui {
+            h3 {
+                color: $red;
+            }
+        }
+
+        .proto {
+
+            h3 {
+                color: $orange;
+            }
+        
+        }
     }
 
     .testimonials {

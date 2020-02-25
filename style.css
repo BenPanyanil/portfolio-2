@@ -8,20 +8,34 @@ body, html {
 }
 
 nav {
-  padding: 40px;
-  padding-left: 7vw;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  width: 100%;
 }
 
 nav ul {
   list-style: none;
+  margin-left: 12.5vw;
+  padding: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 20px;
+  margin-right: 40px;
 }
 
 nav ul li a {
+  font-weight: 500;
   text-decoration: none;
   color: #FF5151;
 }
@@ -38,70 +52,33 @@ nav ul li a {
   z-index: 0;
 }
 
-.grid-container .line {
-  width: 1px;
-  height: 100%;
-  background-color: #EDEDED;
-  z-index: 1;
-}
-
-.grid-container .line-in {
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color: #EDEDED;
-}
-
-.grid-container .line1 {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-}
-
-.grid-container .line2 {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-}
-
-.grid-container .line3 {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-}
-
-.grid-container .line4 {
-  -ms-grid-column: 5;
-      grid-column-start: 5;
-}
-
-.grid-container .line5 {
-  -ms-grid-column: 6;
-      grid-column-start: 6;
-}
-
-.grid-container .line6 {
-  -ms-grid-column: 7;
-      grid-column-start: 7;
-}
-
 .grid-container .lander-header {
   -ms-grid-column: 2;
       grid-column-start: 2;
-  width: 30vw;
-  height: 30vw;
+  width: 33vw;
+  height: 33vw;
   max-width: 800px;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-5%);
-          transform: translateY(-5%);
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 2;
 }
 
 .grid-container .lander-header h1 {
-  margin: 2rem 0;
-  line-height: 3rem;
+  font-size: 5rem;
+  margin: 3rem 0;
+  line-height: 5.5rem;
 }
 
 .grid-container .lander-header .flex {
-  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,9 +88,12 @@ nav ul li a {
 }
 
 .grid-container .lander-header .flex p {
+  font-family: "Merriweather";
+  font-size: 1.2rem;
+  opacity: 0.6;
   width: 30vw;
   height: 100%;
-  line-height: 1.6rem;
+  line-height: 2rem;
   margin: 0;
 }
 
@@ -122,14 +102,15 @@ nav ul li a {
   height: 40px;
   background-color: #9818D6;
   display: inline-block;
-  margin: 5px 20px 0 0;
+  margin: 8px 20px 0 0;
 }
 
 .grid-container .lander-img {
   -ms-grid-column: 5;
       grid-column-start: 5;
-  width: 33vw;
-  height: 33vw;
+  margin-top: 120px;
+  width: 35vw;
+  height: 35vw;
   border: 1px solid black;
   background-color: #fff;
   -webkit-box-shadow: 2.5vw 2.5vw 0 black;
@@ -140,8 +121,8 @@ nav ul li a {
 .grid-container .lander-img img {
   -ms-grid-column: 5;
       grid-column-start: 5;
-  width: 33vw;
-  height: 33vw;
+  width: 35vw;
+  height: 35vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -149,27 +130,254 @@ nav ul li a {
 .grid-container .project-container-1 {
   -ms-grid-column: 2;
       grid-column-start: 2;
-  padding: 400px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100%)[6];
+      grid-template-columns: repeat(6, 100%);
+  padding: 400px 0 0 0;
+  z-index: 2;
+}
+
+.grid-container .project-container-1 .left-container {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 33vw;
+}
+
+.grid-container .project-container-1 .left-container p {
+  font-family: "Merriweather";
+  opacity: 0.6;
+}
+
+.grid-container .project-container-1 .left-container h1 {
+  margin: 2rem 0;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.grid-container .project-container-1 .left-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 33vw;
+  height: 25vw;
+}
+
+.grid-container .project-container-1 .left-container a {
+  font-family: "Merriweather";
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #FF5151;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100px;
+}
+
+.grid-container .project-container-1 .right-container {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  width: 33vw;
+  height: 100%;
+  position: relative;
+}
+
+.grid-container .project-container-1 .right-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 33vw;
+  height: 25vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.grid-container .project-container-1 .right-container .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33vw;
+  height: 25vw;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.grid-container .project-container-1 .right-container .overlay:before {
+  content: '';
+  width: 15px;
+  height: 40px;
+  background-color: #FF5151;
+  display: block;
+  position: relative;
+  top: -104px;
 }
 
 .grid-container .project-container-2 {
   -ms-grid-column: 2;
       grid-column-start: 2;
-  padding: 400px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100%)[6];
+      grid-template-columns: repeat(6, 100%);
+  padding: 250px 0 0 0;
+  z-index: 2;
 }
 
-.grid-container .main-skills-container {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 8;
+.grid-container .project-container-2 .left-container {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  width: 33vw;
+}
+
+.grid-container .project-container-2 .left-container p {
+  font-family: "Merriweather";
+  opacity: 0.6;
+}
+
+.grid-container .project-container-2 .left-container h1 {
+  margin: 2rem 0;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.grid-container .project-container-2 .left-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 33vw;
+  height: 25vw;
+  border: 1px solid black;
+}
+
+.grid-container .project-container-2 .left-container a {
+  font-family: "Merriweather";
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #FF5151;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 400px 0;
-  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100px;
+}
+
+.grid-container .project-container-2 .right-container {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 7;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  width: 33vw;
+  height: 100%;
+  position: relative;
+}
+
+.grid-container .project-container-2 .right-container .img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 33vw;
+  height: 25vw;
+  background-color: #EDEDED;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.grid-container .project-container-2 .right-container .img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 4vw 0 0 0;
+  width: 33vw;
+  height: 25vw;
+}
+
+.grid-container .project-container-2 .right-container .img::before {
+  content: '';
+  width: 15px;
+  height: 40px;
+  background-color: #9818D6;
+  position: absolute;
+  right: 0;
+  top: -104px;
+}
+
+.grid-container .project-container-2::before {
+  content: '';
+  width: 15px;
+  height: 40px;
+  background-color: #EDEDED;
+  margin-bottom: 30px;
+}
+
+.grid-container .main-skills-container {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 9;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  padding: 100px 0;
+  margin: 200px 0;
+  z-index: 2;
+}
+
+.grid-container .main-skills-container .code, .grid-container .main-skills-container .uxui, .grid-container .main-skills-container .proto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  min-width: 600px;
+  max-width: 1600px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px;
+}
+
+.grid-container .main-skills-container .code img, .grid-container .main-skills-container .uxui img, .grid-container .main-skills-container .proto img {
+  width: 15vw;
+  height: 15vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 100px;
+}
+
+.grid-container .main-skills-container .code h3, .grid-container .main-skills-container .uxui h3, .grid-container .main-skills-container .proto h3 {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.grid-container .main-skills-container .code p, .grid-container .main-skills-container .uxui p, .grid-container .main-skills-container .proto p {
+  width: 30vw;
+  font-family: "Merriweather";
+  line-height: 2rem;
+}
+
+.grid-container .main-skills-container .code h3 {
+  color: #9818D6;
+}
+
+.grid-container .main-skills-container .uxui h3 {
+  color: #FF5151;
+}
+
+.grid-container .main-skills-container .proto h3 {
+  color: #FFA41C;
 }
 
 .grid-container .testimonials {

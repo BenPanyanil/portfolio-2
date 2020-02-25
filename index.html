@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <title>Ben's portfolio</title>
 </head>
 <body>
@@ -17,15 +18,9 @@
         </ul>
     </nav>
     <main class="grid-container">
-        <div class="line line1"><div class="line-in"></div></div>
-        <div class="line line2"><div class="line-in"></div></div>
-        <div class="line line3"></div>
-        <div class="line line4"><div class="line-in"></div></div>
-        <div class="line line5"></div>
-        <div class="line line6"><div class="line-in"></div></div>
 
         <div class="lander-header">
-            <h1>My name is Ben. I am a FrontEnd-developer and UI/UX-designer</h1>
+            <h1>Frontend,<br />aesthetics & <br />clean code.</h1>
             <div class="flex"> 
                 <div class="decoration"></div>
                 <p>I want to create digital services with excellent user experience and be a part of a team that wants it too.</p>
@@ -38,42 +33,54 @@
 
         <div class="project-container-1">
             <div class="left-container">
-                <p>Customer project</p>
-                <h2>Päivystystilanteiden opas - Mobile PWA</h2>
-                <img src="" alt="">
+                <p>Helsingin sosiaali- ja terveystoimiala</p>
+                <h1>Sote - Mobile PWA</h2>
+                <img src="./img/mockupSote.jpg" alt="Sote">
                 <a href="">Read more</a>
             </div>
             <div class="right-container">
-                <div class="decoration"></div>
-                <img src="" alt="">
+                <div class="decoration"> 
+                    <div class="block"></div> 
+                </div>
+                <img src="./img/mockupMultiSote.jpg" alt="multiSote">
+                <div class="overlay"></div>
             </div>
         </div>
 
         <div class="project-container-2">
             <div class="left-container">
-                <p>Customer project</p>
-                <h2>Mental health survey - WebApp</h2>
-                <img src="" alt="">
+                <p>Diakonia ammattiopisto</p>
+                <h1>3X10D - WebApp</h2>
+                <img src="./img/mockupDiak.jpg" alt="Diak">
                 <a href="">Read more</a>
             </div>
             <div class="right-container">
                 <div class="decoration"></div>
-                <img src="" alt="">
+                <div class="img"><img src="./img/mockupDesktopDiak.png" alt="DesktopDiak"></div>
             </div>
         </div>
 
         <div class="main-skills-container">
-            <div class="coding">
-                <h3>Code</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="code">
+                <img src="./img/code-icon.svg" alt="code">
+                <div class="text">
+                    <h3>Code</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas iste, ipsa nemo itaque dicta totam in quod inventore! Quod vel quaerat quam exercitationem labore.</p>
+                </div>
             </div>
-            <div class="uiux-design">
-                <h3>UI/UX</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="uxui">
+                <img src="./img/UXUI-icon.svg" alt="uiux">
+                <div class="text">
+                    <h3>UI/UX</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quibusdam et itaque porro quae, maiores nihil, impedit exercitationem, hic tempore eligendi at optio ipsam!</p>
+                </div>
             </div>
-            <div class="prototyping">
-                <h3>Prototyping</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="proto">
+                <img src="./img/prototyping-icon.svg" alt="prototyping">
+                <div class="text">
+                    <h3>Prototyping</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptas ratione quod voluptatibus laborum fugit cum aperiam, quae soluta natus dolorum adipisci laudantium.</p>
+                </div>
             </div>
         </div>
 
@@ -88,5 +95,13 @@
                 <h2>benbackman54@gmail.com</h2>
         </Footer>
     </main>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous">
+    </script>
+    
+    <script src="./myScript.js"></script>
 </body>
 </html>
