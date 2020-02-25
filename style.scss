@@ -53,7 +53,7 @@ nav {
     height: 100%;
     width: 100%;
     z-index: 0;
-    
+
     
     .lander-header {
         grid-column-start: 2;
@@ -137,12 +137,13 @@ nav {
             p {
                 font-family: $font2;
                 opacity: 0.6;
+                font-size: 1.2rem;
             }
 
             h1 {
                 margin: 2rem 0;
-                font-size: 3rem;
-                line-height: 3.5rem;
+                font-size: 4rem;
+                line-height: 4.5rem;
             }
 
             img {
@@ -194,9 +195,9 @@ nav {
                 width: 15px;
                 height: 40px;
                 background-color: $red;
-                display: block;
-                position: relative;
+                position: absolute;
                 top: -104px;
+                right: 0;
             }
         }
     }
@@ -209,7 +210,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(6, 100%);
 
-        padding: 250px 0 0 0;
+        padding: 250px 0 200px 0;
         z-index: 2;
 
         .left-container {
@@ -222,12 +223,13 @@ nav {
             p {
                 font-family: $font2;
                 opacity: 0.6;
+                font-size: 1.2rem;
             }
 
             h1 {
                 margin: 2rem 0;
-                font-size: 3rem;
-                line-height: 3.5rem;
+                font-size: 4rem;
+                line-height: 4.5rem;
             }
 
             img {
@@ -297,16 +299,41 @@ nav {
     }
 
 
+    .separator {
+        grid-column-start: 1;
+        grid-column-end: 9;
+
+        margin: 100px 0;
+        height: 600px;
+        background-image: linear-gradient(to right top, #ffa41c, #ff9426, #ff8530, #ff753a, #ff6644, #ff524f, #ff3b5c, #fe1d6b, #f50083, #e4009e, #c600ba, #9818d6);
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            padding: 15px 40px;
+            border: 1px solid white;
+            box-shadow: 7px 7px 0 white;
+        }
+        
+    
+    }
+
     .main-skills-container {
         grid-column-start: 1;
         grid-column-end: 9;
-        background-color: #fff;
 
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         justify-items: center;
-        padding: 100px 0;
-        margin: 200px 0;
         z-index: 2;
 
         .code, .uxui, .proto {
@@ -334,6 +361,7 @@ nav {
                 width: 30vw;
                 font-family: $font2;
                 line-height: 2rem;
+                opacity: 0.6;
             }
         }
 
